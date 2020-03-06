@@ -1,0 +1,27 @@
+CREATE TABLE orden_trabajo
+
+ ( id_orden_trabajo serial PRIMARY KEY,
+  id_usuario integer,
+  id_sucursal integer,
+  id_cliente integer,
+  cliente character(100),
+  ci_nit integer,
+  id_prenda integer,
+  id_tipo_lavado integer,
+  cantidad_prenda integer,
+  cantidad_peso double precision,
+  medida_prenda double precision,
+  costo_prenda double precision,
+  costo_kilo double precision,
+  costo_metro double precision,
+  total_servicio double precision,
+  pago_servicio double precision,
+  saldo_servicio double precision,
+  moneda character (100),
+  descuento double precision,
+  tipo_cliente integer,
+  estado character,
+  codigo_ot character(100),
+  fecha date,
+  hora time )
+ 

@@ -1,0 +1,49 @@
+.navbar-default
+{
+	background: #0B614B;
+	margin: 0px;
+	border:1px solid #0B3B2E;
+	border-radius: 0px;
+}
+
+#link-item
+{
+	color: white;
+	transition: 1s;
+}
+
+#link-item:hover
+{
+	color: white;
+	font-size: 17px;
+	transition: 1s;	
+	font-weight: bold; 
+	background: #0B3B2E;
+	text-shadow: 1px 1px 1px black;
+}
+
+#link-item-titulo{
+	background: #0B3B2E;
+	font-weight: bold; 
+	transition: 0.5s;	
+	color:#FACC2E;
+}
+#link-item-titulo:hover{
+    background: #0B3B2E;
+    transition: 0.5s;	
+    font-size: 20px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.row{
+	margin: 0px;
+	padding: 0px;
+}
+
+h1{margin: 1px;}
+h2{margin: 1px;}
+h3{margin: 1px;}
+h4{margin: 1px;}
+h5{margin: 1px;}
+h6{margin: 1px;}
+p{font-weight: bold;}

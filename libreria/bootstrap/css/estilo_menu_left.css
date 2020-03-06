@@ -1,0 +1,151 @@
+ .link_nav{
+       background: #0B3861;
+       padding: 0%;
+       padding-right: 0px;
+       margin: 0px;
+    }
+    .link{
+    list-style: none;
+    border-bottom: 1px solid white;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    margin-top: 1%;
+    background: #0B3861;
+    padding-left: 5%;
+  }
+
+  .link:hover{
+    /*border-bottom: 1px solid white; */
+    background: #0B243B; 
+  }
+
+  .link a{
+      cursor: pointer; font-size: 17px;
+      text-decoration: none;
+      color: white;
+      width: 100%;
+
+  }
+
+  /* Estilos del cargador de eventos del sistema */
+
+   #panel_cargado {
+      width: 40px;
+      height: 40px;
+      border: 5px solid #eee;
+      border-top: 5px solid #666;
+      border-radius: 50%;
+      animation-name: girar;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+    @keyframes girar {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+
+    /* Estilos de los modals */
+
+  #panel_editar_modal
+  {
+    background: #005ea6;
+  }
+
+  #panel_editar_modal h4
+  {
+    color:white;
+    font-weight: bold;
+  }
+
+  #panel_eliminar_modal{
+    background: #FA5858;
+  }
+
+  #panel_eliminar_modal h4{
+    color:white;
+    font-weight: bold;
+  }
+
+  .modal-header{
+    background: #0b3861;
+    color:white;
+    border-radius: 0px;
+  }
+
+  .modal-header h4{
+    font-weight: bold;
+    text-shadow: 1px 2px 3px black;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 25px;
+  }
+
+  .modal-header h4:hover{
+    transition: 0.5s;
+    font-size: 30px;
+  }
+
+  .modal-content{
+     border-radius: 0px;
+  }
+  .close{
+    color:white;
+    opacity: 1;
+    font-size: 40px;
+    transition: 0.5s;
+  }
+
+  .close:hover{
+    color:white;
+    opacity: 1;
+    font-size: 55px;
+    transition: 0.5s;
+    margin-top: -5px;
+  }
+
+  .btn{
+    border-radius: 0px; 
+  }
+  .btn:hover{
+    font-weight: bold; 
+  }
+
+  .btn-default{
+    background: #E6E6E6;
+    border: 1px solid #D8D8D8;
+    color:#585858;
+  }
+
+  .btn-default:hover{
+    color:#585858;
+  }
+
+
+  .form-control{
+    box-shadow: none;
+    border-radius: 0px; 
+    border:none;
+    border: 1px solid #CCCCCC;
+    transition: 0.2s;
+  }
+
+   .form-control:focus{
+    box-shadow: none;
+    border:none;
+    transition: 0.2s;
+    border: 1px solid #999999;
+  }
+
+  .table th
+  {
+     background: #0b3861;
+     color:white;
+     text-align: center;
+     cursor: pointer;
+     text-transform: uppercase;
+  }

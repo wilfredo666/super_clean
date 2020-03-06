@@ -1,0 +1,19 @@
+Detalle de color ---modulo extra
+id_color
+color
+cod_color
+
+Detalle de formas
+id_forma
+forma
+
+Redondo cuadrados rayas y dibujos en área de tikeo
+
+Pago de entrega con buscador aplicando
+Las funciones directas con un solo click
+
+Agregar entregas de lavados especiales 
+Agregar código numeral de la orden especial
+Almacén de alfombras modulo de recepción de alfombras
+
+Reporte de lavado por fechas y suma de prendas por seco y vapor
