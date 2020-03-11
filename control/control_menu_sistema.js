@@ -388,13 +388,29 @@ function btn_carrito_orden_trabajo()
     });
 }
 
-
+ //btn_realizar_entrega_pedido();
 function btn_entrega()
 {    
     var ob ='';
     $.ajax({
         type: 'POST',
         url:'../vista/vista_listar_entrega.php',
+        data: ob,
+        beforeSend: function(objeto){$("#cargando").html("<center><div id='panel_cargado'></div></center>");
+                                    },
+        success: function(data)
+        { 
+            $('#cargando').html('');
+            $('#panel_contenedor_principal').html(data);
+
+        }
+    });
+}
+function btn_entregar(){
+        var ob ='';
+    $.ajax({
+        type: 'POST',
+        url:'../vista/vista_entregar.php',
         data: ob,
         beforeSend: function(objeto){$("#cargando").html("<center><div id='panel_cargado'></div></center>");
                                     },

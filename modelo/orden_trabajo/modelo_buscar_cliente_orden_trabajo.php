@@ -29,7 +29,7 @@
      <tr style="cursor: pointer;">
      	<td> <?php echo $cliente; ?></td>
      	<td> <?php echo $ci_nit; ?></td>
-     	<td align="center" > <button class="btn btn-primary btn-md" onclick="btn_seleccion_cliente_ot('<?php echo $id_cliente; ?>');"> + </button></td>
+     	<td align="center" > <button class="btn btn-primary btn-md" onclick="btn_seleccion_cliente_ot('<?php echo $id_cliente; ?>');"> OK </button></td>
      </tr>
  	<?php
 

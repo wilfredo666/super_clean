@@ -1,67 +1,95 @@
 
- <?php
- require('../conector/conexion.php');
+<?php
+require('../conector/conexion.php');
 
- $ID_prenda = $_POST['ID_prenda'];
+$ID_prenda = $_POST['ID_prenda'];
 
- $query = pg_query("SELECT * FROM prenda WHERE id_prenda='$ID_prenda'");
- while($row = pg_fetch_array($query))
-  {
-      ?> 
-      <div class='row'>
+$query = pg_query("SELECT * FROM prenda WHERE id_prenda='$ID_prenda'");
+while($row = pg_fetch_array($query))
+{
+?> 
+<div class='row'>
 
 
-       <div class='col-lg-6 col-sm-6 col-xs-12'>
+    <div class='col-lg-6 col-sm-6 col-xs-12'>
 
-       <label> portada : </label> </br>  
-       <?php $img = $row['portada'];?>
-         <div style='width:100%;' align='center'>
-          <img src='../multimedia/imagenes/<?php echo $img; ?>'  style='height:150px; width:150px;'>
-          </div> 
-        </div>
+        <label> Portada : </label> </br>  
+    <?php $img = $row['portada'];?>
+    <div style='width:100%;' align='center'>
+        <img src='../multimedia/imagenes/<?php echo $img; ?>'  style='height:150px; width:150px;'>
+    </div> 
+</div>
 
-       <div class='col-lg-6 col-sm-6 col-xs-12'>
+<div class='col-lg-6 col-sm-6 col-xs-12'>
 
-       <label> prenda : </label> </br>  
-       <?php echo $prenda=$row['prenda']; ?> 
+    <label> Prenda : </label> </br>  
+<?php echo $prenda=$row['prenda']; ?> 
 
-       </div>
+</div>
 
-       <div class='col-lg-6 col-sm-6 col-xs-12'>
+<div class='col-lg-6 col-sm-6 col-xs-12'>
 
-       <label> precio : </label> </br>  
-       <?php echo $precio=$row['precio']; echo " Bs."; ?> 
+    <label> Precio : </label> </br>  
+<?php echo $precio=$row['precio']; echo " Bs."; ?> 
 
-           </div>
-       <div class='col-lg-6 col-sm-6 col-xs-12'>
+</div>
 
-       <label> tipo : </label> </br>  
-       <?php $id_tipo_prenda = trim($row['tipo_prenda']); 
-          $sql_tipo = pg_query("SELECT * FROM tipo_prenda WHERE id_tipo_prenda='$id_tipo_prenda'");
-         $row_tipo = pg_fetch_array($sql_tipo);
+<div class='col-lg-6 col-sm-6 col-xs-12'>
 
-         echo $row_tipo['tipo_prenda'];
+    <label> Tipo : </label> </br>  
+<?php $id_tipo_prenda = trim($row['tipo_prenda']); 
+ $sql_tipo = pg_query("SELECT * FROM tipo_prenda WHERE id_tipo_prenda='$id_tipo_prenda'");
+ $row_tipo = pg_fetch_array($sql_tipo);
 
-       ?> 
+ echo $row_tipo['tipo_prenda'];
 
-           </div>
-       <div class='col-lg-6 col-sm-6 col-xs-12'>
+?> 
 
-       <label> moneda : </label> </br>  
-       <?php $id_moneda=trim($row['moneda']); 
-         
-         $sql_mon = pg_query("SELECT * FROM moneda WHERE id_moneda='$id_moneda'");
-         $row_mon = pg_fetch_array($sql_mon);
+</div>
+<div class='col-lg-6 col-sm-6 col-xs-12'>
 
-         echo $row_mon['moneda'];
+    <label> Moneda : </label> </br>  
+<?php $id_moneda=trim($row['moneda']); 
 
-       ?> 
-       </div>
-    <?php
-  }
+ $sql_mon = pg_query("SELECT * FROM moneda WHERE id_moneda='$id_moneda'");
+ $row_mon = pg_fetch_array($sql_mon);
 
- ?>
- <!-- final div row -->
- </div>
- <script type='text/javascript' src='../control/control_editar_prenda.js'></script>
- 
+ echo $row_mon['moneda'];
+
+?> 
+</div>
+
+<div class='col-lg-6 col-sm-6 col-xs-12'>
+
+    <label> Color : </label> </br>  
+<?php $id_color=trim($row['id_color']); 
+
+ $sql_col = pg_query("SELECT * FROM color WHERE id_color='$id_color'");
+ $row_col = pg_fetch_array($sql_col);
+
+ echo $row_col['nombre_color'];
+
+?> 
+</div>
+
+<div class='col-lg-6 col-sm-6 col-xs-12'>
+
+    <label> Forma : </label> </br>  
+<?php $id_forma=trim($row['id_forma']); 
+
+ $sql_for = pg_query("SELECT * FROM forma WHERE id_forma='$id_forma'");
+ $row_for = pg_fetch_array($sql_for);
+
+ echo $row_for['forma'];
+
+?> 
+</div>
+
+<?php
+}
+
+?>
+<!-- final div row -->
+</div>
+<script type='text/javascript' src='../control/control_editar_prenda.js'></script>
+

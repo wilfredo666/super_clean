@@ -79,6 +79,8 @@
 
             <ul class='link_nav'>
 
+                <li class='link_submenu'> <a onclick='btn_entregar();' class="item"> Entregar </a> </li>
+
                 <li class='link_submenu'> <a onclick='btn_entrega();' class="item"> Registrar Entregas </a> </li>
 
                 <li class='link_submenu'> <a onclick='btn_listar_entrega();' class="item"> Listar Entregas </a> </li>
@@ -117,16 +119,16 @@
                 <li class='link_submenu'> 
                     <a onclick='btn_forma_prenda();' class="item" > Formas de Prenda </a> 
                 </li>
-                            <li class='link_submenu'> 
-              <a onclick='btn_color_prenda();' class="item" > Colores de Prenda </a> 
-            </li>
+                <li class='link_submenu'> 
+                    <a onclick='btn_color_prenda();' class="item" > Colores de Prenda </a> 
+                </li>
                 <!--
 <li class='link_submenu'> 
 <a onclick='btn_precio_kilo();' class="item" > Precio Kilo </a> 
 </li> 
-                <li class='link_submenu'> 
-                    <a onclick='btn_tipo_prenda();' class="item" > tipo prenda </a> 
-                </li>
+<li class='link_submenu'> 
+<a onclick='btn_tipo_prenda();' class="item" > tipo prenda </a> 
+</li>
 
 <li class='link_submenu'> 
 <a onclick='btn_moneda();' class="item" > Moneda </a> 

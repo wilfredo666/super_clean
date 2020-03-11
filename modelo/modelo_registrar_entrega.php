@@ -1,5 +1,4 @@
 <?php
- 
   $codigo_ot= trim($_POST['codigo_ot']); 
   $estado= trim($_POST['estado']); 
   $fecha= trim($_POST['fecha']); 

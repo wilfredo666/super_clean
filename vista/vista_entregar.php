@@ -11,7 +11,7 @@
                     <table class='table table-condensed'>
                         <tr>
                             <td>
-                                <input type='text' class='form-control' id='txt_buscar' placeholder='Buscar Cliente' onkeyup='btn_buscar_cliente_reg();'>
+                                <input type='text' class='form-control' id='txt_buscar' placeholder='Buscar Cliente' onkeyup='btn_buscar_cliente_reg_aut();'>
                             </td>
                         </tr>
                     </table>
@@ -69,7 +69,7 @@
                                         <tr> <td> estado : <?php echo $estado; ?></td> </tr>
                                         <tr> <td> <?php echo " Prendas Faltantes : "; echo $resta; ?></td> </tr>
                                         <tr> <td> fecha : <?php echo $fecha; ?></td></tr>
-                                        <tr> <td align="center"> <button class="btn btn-info" onclick="btn_listar_detalle_entrega('<?php echo $codigo_ot; ?>');"> Entregar </button> </td> </tr>
+                                        <tr> <td align="center"> <button class="btn btn-info" onclick="btn_entregar_ot('<?php echo $codigo_ot; ?>');"> Entregar </button> </td> </tr>
 
                                     </tbody>
                                 </table>
