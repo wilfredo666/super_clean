@@ -40,7 +40,7 @@ if($action == 'ajax'){
         ?>
         <tr> 
             <td><?php echo $row['nombre_color'];?></td>
-            <td><div style="background-color:<?php echo $row['cod_color'];?>; width:100px; height:50px;"></div></td>
+            <td align='center'><div style="background-color:<?php echo $row['cod_color'];?>; width:100px; height:50px;"></div></td>
             <td align='center'>
                 <button type='button' class='btn btn-default btn-xs' onclick="btn_opciones('<?php echo $ID_color_prenda;?>');"data-toggle='modal' data-target='#myModal_opciones'> ... </button></td>
         </tr>

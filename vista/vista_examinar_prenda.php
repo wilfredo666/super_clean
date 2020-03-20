@@ -59,31 +59,6 @@ while($row = pg_fetch_array($query))
 ?> 
 </div>
 
-<div class='col-lg-6 col-sm-6 col-xs-12'>
-
-    <label> Color : </label> </br>  
-<?php $id_color=trim($row['id_color']); 
-
- $sql_col = pg_query("SELECT * FROM color WHERE id_color='$id_color'");
- $row_col = pg_fetch_array($sql_col);
-
- echo $row_col['nombre_color'];
-
-?> 
-</div>
-
-<div class='col-lg-6 col-sm-6 col-xs-12'>
-
-    <label> Forma : </label> </br>  
-<?php $id_forma=trim($row['id_forma']); 
-
- $sql_for = pg_query("SELECT * FROM forma WHERE id_forma='$id_forma'");
- $row_for = pg_fetch_array($sql_for);
-
- echo $row_for['forma'];
-
-?> 
-</div>
 
 <?php
 }

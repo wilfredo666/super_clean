@@ -336,6 +336,20 @@ function btn_listar_ordenes_trabajo_clientes()
 
 }
 
+function cargar_div_col_for(codigo_ot){
+    var obj={codigo_ot:codigo_ot};
+    $.ajax({
+        type : 'POST',
+        url:'../modelo/modelo_listar_prendas_ot_tikeo2.php',
+        data: obj,
+        beforeSend: function(objeto){
+            $('#panel_listado_prendas_up').html('cargando .... ');
+        },
+        success:function(data){
+            $('#panel_listado_prendas_up').html(data).fadeIn('slow');
+        }
+    });
+}
 function btn_mostrar_prendas_orden_trabajo(codigo_ot)
 {
     var obj = { codigo_ot: codigo_ot };
@@ -357,7 +371,7 @@ function btn_mostrar_prendas_orden_trabajo(codigo_ot)
 function btn_mostrar_prendas_orden_trabajo2(cod_barr,codigo_ot)
 {
     var obj = { codigo_ot: codigo_ot,
-              cod_barr:cod_barr};
+               cod_barr:cod_barr};
 
     $.ajax({
         type : 'POST',
@@ -372,6 +386,30 @@ function btn_mostrar_prendas_orden_trabajo2(cod_barr,codigo_ot)
     });
 
 }
+function verificar_col_for(cod_barr, orden_trabajo, id_orden_trabajo){
+    var size = cod_barr.length;
+    var cod_barr=cod_barr;
+    var orden_trabajo=orden_trabajo;
+    var id_orden_trabajo=id_orden_trabajo;
+    var obj={
+        size:size,
+        cod_barr:cod_barr,
+        orden_trabajo:orden_trabajo,
+        id_orden_trabajo:id_orden_trabajo
+    }
+    $.ajax({
+        type : 'POST',
+        url:'../modelo/modelo_listar_prendas_ot_tikeo2.php',
+        data: obj,
+        beforeSend: function(objeto){
+            $('#panel_listado_prendas_up').html('cargando .... ');
+        },
+        success:function(data){
+            $('#panel_listado_prendas_up').html(data).fadeIn('slow');
+        }
+    }); 
+
+}
 
 function btn_asignar_codigo_barras_tikeo(id_ot,codigo_ot)
 {
@@ -379,8 +417,11 @@ function btn_asignar_codigo_barras_tikeo(id_ot,codigo_ot)
     var size = codigo_tik.length;
     var id_usuario = $("#id_usuario_sesion").val();
     var id_sucursal = $("#id_sucursal_sesion").val();
+    var color=$("#color").val();
+    var forma=$("#forma").val();
+    var color2=$("#color2").val();
+    var forma2=$("#forma2").val();
     var cod_ot=codigo_ot;
-
     setTimeout(function(){
 
         var obj = { codigo_tik: codigo_tik,
@@ -388,6 +429,10 @@ function btn_asignar_codigo_barras_tikeo(id_ot,codigo_ot)
                    size:size,
                    id_usuario:id_usuario,
                    id_sucursal: id_sucursal,
+                   color:color,
+                   forma:forma,
+                   color2:color2,
+                   forma2:forma2,
                    cod_ot:cod_ot};
 
         $.ajax({

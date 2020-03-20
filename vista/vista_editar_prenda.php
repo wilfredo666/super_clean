@@ -122,61 +122,6 @@ while($row = pg_fetch_array($query))
         <div id='resp_moneda' > </div>
     </div>
 
-       <div class='col-lg-6 col-sm-6 col-xs-12'>
-
-        <label> Forma : </label>  
-        <?php $forma= trim($row['id_forma']); ?> 
-        <?php 
-
- $sql_forma = pg_query("SELECT * FROM forma WHERE id_forma='$forma'");
- $row_forma = pg_fetch_array($sql_forma);
- echo $row_forma['forma']; 
-
-        ?>
-
-        <select  id='forma' class='form-control'>
-            <option value=''> Seleccione </option> <?php 
-
- $sql_seleccion = pg_query("SELECT * FROM forma");
- while ($row_seleccion = pg_fetch_array($sql_seleccion)) 
- {
-     $ID_campo = $row_seleccion['id_forma'];
-     $campo = $row_seleccion['forma'];?>
-            <option value ='<?php echo $ID_campo;?>'><?php echo $campo; ?></option> 
-            <?php 
- } ?> 
-        </select>
-        <div id='resp_moneda' > </div>
-    </div>
-    
-    <div class='col-lg-6 col-sm-6 col-xs-12'>
-
-        <label> Color : </label>  
-        <?php $color= trim($row['id_color']); ?> 
-        <?php 
-
- $sql_col = pg_query("SELECT * FROM color WHERE id_color='$color'");
- $row_col = pg_fetch_array($sql_col);
- echo $row_col['nombre_color']; 
-
-        ?>
-
-        <select  id='color' class='form-control'>
-            <option value=''> Seleccione </option> <?php 
-
- $sql_seleccion = pg_query("SELECT * FROM color");
- while ($row_seleccion = pg_fetch_array($sql_seleccion)) 
- {
-     $ID_campo = $row_seleccion['id_color'];
-     $campo = $row_seleccion['cod_color'];
-     $nom_color=$row_seleccion['nombre_color'];?>
-            <option value ='<?php echo $ID_campo;?>'  style="background-color:<?php echo $campo;?>;"><?php echo $nom_color; ?></option> 
-            <?php 
- } ?> 
-        </select>
-        <div id='resp_moneda' > </div>
-    </div>
-
 </div>
 <?php
 }

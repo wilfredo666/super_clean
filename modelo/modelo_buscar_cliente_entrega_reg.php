@@ -3,6 +3,10 @@
     require "../conector/conexion.php";
     $txt_buscar = trim($_POST['txt_buscar']);
     $sql_ot = pg_query("SELECT DISTINCT codigo_ot FROM orden_trabajo WHERE cliente ILIKE '%$txt_buscar%' and estado ='ACOMODADO' LIMIT 10");
+    ?>
+    <label for="">Se busco: "<?php echo $txt_buscar;?>"</label><br>
+    <a href="javascript:void(0);" onclick="btn_entrega();">Listar ordenes</a>
+    <?php
     while($row_ot = pg_fetch_array($sql_ot))
     {
         $codigo_ot = $row_ot['codigo_ot'];

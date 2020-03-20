@@ -3,7 +3,6 @@
 	<html>
 	<head>
 	<title> Menu </title>
-
 	 <?php
 	  require 'vista_header.php';
 	 ?>

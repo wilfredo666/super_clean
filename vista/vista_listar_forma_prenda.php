@@ -1,4 +1,3 @@
-
 <div class='row' style='background:; margin: 0px; padding: 0px;'>
     <!-- Formulario de Busqueda-->
 

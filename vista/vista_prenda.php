@@ -1,5 +1,3 @@
-
-
 <div class='row' style='margin:0px; padding:0px;'> 
 
 
@@ -87,48 +85,6 @@
         $ID_campo = $row_seleccion['id_moneda'];
         $campo = $row_seleccion['moneda'];?>
     <option value ='<?php echo $ID_campo;?>'><?php echo $campo; ?></option> 
-    <?php 
-    } ?> 
-</select>
-
-<div id='resp_moneda' ></div>
-</div>
-
-<div class='col-lg-6 col-xs-6'> 
-
-    <label>Forma de prenda</label></br>
-<select  id='forma' class='form-control'>
-    <option value=''> Seleccione </option> <?php 
-    require '../conector/conexion.php';
-    $sql_seleccion = pg_query("SELECT * FROM forma");
-    while ($row_seleccion = pg_fetch_array($sql_seleccion)) 
-    {
-        $ID_forma = $row_seleccion['id_forma'];
-        $forma = $row_seleccion['forma'];?>
-    <option value ='<?php echo $ID_forma;?>'><?php echo $forma; ?></option> 
-    <?php 
-    } ?> 
-</select>
-
-<div id='resp_forma' ></div>
-</div>
-
-
-<div class='col-lg-6 col-xs-6'> 
-
-    <label>Color de prenda</label></br>
-<select  id='color' class='form-control'>
-    <option value=''> Seleccione </option> <?php 
-    require '../conector/conexion.php';
-    $sql_seleccion = pg_query("SELECT * FROM color");
-    while ($row_seleccion = pg_fetch_array($sql_seleccion)) 
-    {
-        $ID_color = $row_seleccion['id_color'];
-        $nombre_color = $row_seleccion['nombre_color'];
-        $cod_color=$row_seleccion['cod_color'];
-    ?>
-    <option value ='<?php echo $ID_color;?>' style="background-color:<?php echo $cod_color;?>;"><?php echo $nombre_color; ?>
-    </option> 
     <?php 
     } ?> 
 </select>
